@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bundle & Save</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <h1>Bundle & Save</h1>
+
+    <div class="cards-container">
+
+      <!-- 1 Pair -->
+      <div class="card" onclick="selectCard(this, 'box1')">
+        <input type="radio" name="bundle" hidden>
+        <div class="card-header">
+          <span>1 Pair - DKK 195.00</span>
+          <span class="tag">50% OFF</span>
+        </div>
+        <div class="card-body" id="box1">
+          <div class="options">
+            <label>Size:
+              <select><option>S</option><option>M</option><option>L</option></select>
+            </label>
+            <label>Color:
+              <select><option>Black</option><option>White</option><option>Blue</option></select>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Pair -->
+      <div class="card" onclick="selectCard(this, 'box2')">
+        <input type="radio" name="bundle" hidden>
+        <div class="card-header">
+          <span>2 Pair - DKK 345.00</span>
+          <span class="tag popular">Most Popular - 40% OFF</span>
+        </div>
+        <div class="card-body" id="box2">
+          <div class="options">
+            <label>Size #1:
+              <select><option>S</option><option>M</option><option>L</option></select>
+            </label>
+            <label>Color #1:
+              <select><option>Black</option><option>White</option><option>Blue</option></select>
+            </label>
+          </div>
+          <div class="options">
+            <label>Size #2:
+              <select><option>S</option><option>M</option><option>L</option></select>
+            </label>
+            <label>Color #2:
+              <select><option>Black</option><option>White</option><option>Blue</option></select>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Pair -->
+      <div class="card" onclick="selectCard(this, 'box3')">
+        <input type="radio" name="bundle" hidden>
+        <div class="card-header">
+          <span>3 Pair - DKK 528.00</span>
+          <span class="tag">60% OFF</span>
+        </div>
+        <div class="card-body" id="box3">
+          <div class="options">
+            <label>Size #1:
+              <select><option>S</option><option>M</option><option>L</option></select>
+            </label>
+            <label>Color #1:
+              <select><option>Black</option><option>White</option><option>Blue</option></select>
+            </label>
+          </div>
+          <div class="options">
+            <label>Size #2:
+              <select><option>S</option><option>M</option><option>L</option></select>
+            </label>
+            <label>Color #2:
+              <select><option>Black</option><option>White</option><option>Blue</option></select>
+            </label>
+          </div>
+          <div class="options">
+            <label>Size #3:
+              <select><option>S</option><option>M</option><option>L</option></select>
+            </label>
+            <label>Color #3:
+              <select><option>Black</option><option>White</option><option>Blue</option></select>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="add-to-cart" onclick="addToCart()">+ Add to Cart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

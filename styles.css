@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Container Styles */
+.main-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f9d58;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Cards Layout */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform: scale(1);
+}
+
+.card:hover {
+  border-color: #0f9d58;
+  box-shadow: 0 6px 18px rgba(0, 128, 0, 0.15);
+  transform: scale(1.015);
+}
+
+.card.selected {
+  border-color: #0f9d58;
+  box-shadow: 0 8px 24px rgba(0, 128, 0, 0.25);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Tags */
+.tag {
+  background: #ffd54f;
+  color: #333;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.popular {
+  background: #c8e6c9;
+  color: #0f9d58;
+  font-weight: bold;
+}
+
+/* Expandable Card Body */
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.card.selected .card-body {
+  margin-top: 16px;
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Options (Dropdowns) */
+.options {
+  margin-bottom: 14px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+select {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #0f9d58;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #0c7b45;
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
